@@ -3,5 +3,6 @@ class HomeController < ApplicationController
 
   def index
     @user = current_user
+    @activities = Activity.all
   end
 end
