@@ -1,0 +1,44 @@
+<%= form_for [@activity, @review] do |f| %>
+
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+
+
+  <div class='field'>
+    <%= f.label :rating %>
+    <p>
+      <input type='radio' id='1' name='rating' value='1' />
+      <label for='1'><i class='material-icons'>stars</i></label>
+    </p>
+    <p>
+      <input type='radio' id='2' name='rating' value='2' />
+      <label for='2'><i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i></label>
+    </p>
+    <p>
+      <input type='radio' id='3' name='rating' value='3' />
+      <label for='3'><i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i></label>
+    </p>
+    <p>
+      <input type='radio' id='4' name='rating' value='4' />
+      <label for='4'><i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i></label>
+    </p>
+    <p>
+      <input type='radio' id='5' name='rating' value='5' />
+      <label for='5'><i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i>
+        <i class='material-icons'>stars</i></label>
+    </p>
+  </div>
+
+  <%= f.submit class: 'btn'%>
+<% end %>
