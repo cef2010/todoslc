@@ -1,3 +1,14 @@
 <% if user_signed_in? %>
   <%= image_tag current_user.photo.url(:medium) %>
+  <%= @activities.each do |activity| %>
+    <%= image_tag activity.photo.url(:medium) %>
+    <h2>Name: <%= activity.name %></h2>
+    <h2>Address: <%= activity.address %></h2>
+    <h2>City: <%= activity.city %></h2>
+    <h2>State: <%= activity.state %></h2>
+    <h2>Zip Code: <%= activity.zip_code %></h2>
+    <h2>Description: <%= activity.description %></h2>
+    <h2>Phone_number: <%= activity.phone_number %></h2>
+    <%= link_to 'Go to activity', activity_path(activity) %>
+  <% end %>
 <% end %>
