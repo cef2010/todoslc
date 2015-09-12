@@ -2,6 +2,7 @@ class ActivitiesController < ApplicationController
   def show
     @activity = Activity.find(params[:id])
     @reviews = @activity.reviews
+    @replies = Reply.all
   end
 
   def sort

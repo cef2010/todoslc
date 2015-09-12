@@ -23,6 +23,24 @@
   <p>
     <%= r.body %>
   </p>
+
+  <%= link_to "Reply", new_activity_review_reply_path(@activity, r) %><br />
+
+  <% @replies.each do |rp| %>
+    <% if rp.review_id == r.id %>
+    <div class='row'>
+      <div class='col l4'>
+      <%= image_tag rp.user.photo.url(:thumb) %>
+    </div>
+    <div class='col l6'>
+      <h5><%= rp.user.user_name %></h5>
+      <p><%= rp.body %></p>
+      <br />
+    </div>
+    </div>
+    <% end %>
+  <% end %>
+
 </div>
 </div>
 <% end %>

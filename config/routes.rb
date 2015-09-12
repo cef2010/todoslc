@@ -5,9 +5,10 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :replies
   resources :activities do
-    resources :reviews
+    resources :reviews do
+      resources :replies
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
