@@ -5,7 +5,6 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    binding.pry
     @activity = Activity.find(params[:activity_id])
     @review = Review.new(review_params)
     @review.activity = @activity

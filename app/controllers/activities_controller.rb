@@ -1,6 +1,7 @@
 class ActivitiesController < ApplicationController
   def show
     @activity = Activity.find(params[:id])
+    @reviews = @activity.reviews
   end
 
   def sort

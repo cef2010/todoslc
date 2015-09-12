@@ -2,5 +2,19 @@
 <%= image_tag @activity.photo.url(:large) %>
 <h1><%= @activity.name %></h1>
 <h3><%= @activity.address %></h3>
-<%= link_to "Add a Review", new_activity_review_path(@activity.id) %>
+<h3><%= @activity.city %>, <%= @activity.state %></h3>
+<h3><%= @activity.zip_code %></h3>
+<p><%= @activity.description %><p>
+
+<%= link_to "Add a Review", new_activity_review_path(@activity.id) %><br />
+<hr>
+<% @reviews.each do |r|%>
+  <h5>
+  <p>
+    <% r.rating.times do %>
+      <i class='material-icons'>stars</i>
+    <% end %>
+    <%= r.body %>
+  </p>
+<% end %>
 </div>
