@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <%= image_tag current_user.photo.url(:medium) %>
-  <%= @activities.each do |activity| %>
+  <% @activities.each do |activity| %>
     <%= image_tag activity.photo.url(:medium) %>
     <h2>Name: <%= activity.name %></h2>
     <h2>Address: <%= activity.address %></h2>
