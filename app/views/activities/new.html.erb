@@ -1,0 +1,80 @@
+<div class='container'>
+  <h1>Create New Activity</h1>
+
+  <%= form_for @activity do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zip_code %><br />
+    <%= f.text_field :zip_code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </div>
+
+  <div class="field">
+    <div class='row'>
+      <%= f.label :tags %><br />
+      <div class='col s12 l4'>
+        <input type='checkbox' id='outdoors' name='activity[tags][]' value='outdoors'/>
+        <label for='outdoors'>Outdoors</label><br />
+        <input type='checkbox' id='food' name='activity[tags][]' value='food'/>
+        <label for='food'>Food</label><br />
+        <input type='checkbox' id='music' name='activity[tags][]' value='music'/>
+        <label for='music'>Music</label><br />
+        <input type='checkbox' id='art' name='activity[tags][]' value='art'/>
+        <label for='art'>Art</label><br />
+      </div>
+      <div class='col s12 l4'>
+        <input type='checkbox' id='shopping' name='activity[tags][]' value='shopping'/>
+        <label for='shopping'>Shopping</label><br />
+        <input type='checkbox' id='evening' name='activity[tags][]' value='evening'/>
+        <label for='evening'>Evening</label><br />
+        <input type='checkbox' id='family_friendly' name='activity[tags][]' value='family_friendly'/>
+        <label for='family_friendly'>Family Friendly</label><br />
+        <input type='checkbox' id='pet_friendly' name='activity[tags][]' value='pet_friendly'/>
+        <label for='pet_friendly'>Pet Friendly</label><br />
+      </div>
+      <div class='col s12 l4'>
+        <input type='checkbox' id='mornings' name='activity[tags][]' value='mornings'/>
+        <label for='mornings'>Mornings</label><br />
+        <input type='checkbox' id='18_and_up' name='activity[tags][]' value='18_and_up'/>
+        <label for='18_and_up'>18+</label><br />
+        <input type='checkbox' id='free' name='activity[tags][]' value='free'/>
+        <label for='free'>Free</label><br />
+        <input type='checkbox' id='date_night' name='activity[tags][]' value='date_night'/>
+        <label for='date_night'>Date Night</label><br />
+      </div>
+    </div>
+  </div>
+
+  <%= f.submit class: 'btn' %>
+
+  <% end %>
+</div>

@@ -13,4 +13,8 @@
  *= require_tree .
  *= require_self
  */
+@import "materialize/components/color";
+$primary-color: color("amber", "darken-4") !default;
+$secondary-color: color("indigo", "lighten-2") !default;
+$link-color: color("indigo", "darken-2") !default;
 @import 'materialize';

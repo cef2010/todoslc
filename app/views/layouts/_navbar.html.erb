@@ -1,0 +1,47 @@
+<ul id="dropdown" class="dropdown-content">
+  <li><a href="tag1">tag1</a></li>
+  <li><a href="tag2">tag2</a></li>
+  <li><a href="tag3">tag3</a></li>
+</ul>
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">TODO in SLC</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/">Home</a></li>
+      <li><a href="users">Profile</a></li>
+      <li><a class="dropdown-button" href="" data-activates="dropdown">Find an Activity<i class="material-icons right">arrow_drop_down</i></a></li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'Log In', new_user_session_path %></li>
+        <li><%= link_to('Register', new_user_registration_path)  %></li>
+      <% end %>
+    </ul>
+
+    <ul class="side-nav" id="mobile-demo">
+      <% if user_signed_in? %>
+        <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+        <li class="divider"></li>
+      <% else %>
+        <li><%= link_to 'Log In', new_user_session_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to('Register', new_user_registration_path)  %></li>
+        <li class="divider"></li>
+      <% end %>
+      <li><a href="/">Home</a></li>
+      <li class="divider"></li>
+      <li><a href="users">Profile</a></li>
+      <li class="divider"></li>
+      <li><a>Find an Activity</a></li>
+      <li class="divider"></li>
+      <li><a href="tag1">tag1</a></li>
+      <li class="divider"></li>
+      <li><a href="tag2">tag2</a></li>
+      <li class="divider"></li>
+      <li><a href="tag3">tag3</a></li>
+    </ul>
+
+  </div>
+</nav>
